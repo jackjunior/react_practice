@@ -1,4 +1,5 @@
 import productPic from "../assets/pic/fb.png";
+import PropTypes from "prop-types"
 
 export default function Product({ Id, Name, Qty, OrderQty, increaseOrderQty, decreaseOrderQty }) {
   return (
@@ -13,4 +14,13 @@ export default function Product({ Id, Name, Qty, OrderQty, increaseOrderQty, dec
       </div>
     </td>
   );
+}
+
+Product.propTypes = {
+  Id: PropTypes.string,
+  Name: PropTypes.string,
+  Qty: PropTypes.number,
+  OrderQty: PropTypes.number,
+  increaseOrderQty: PropTypes.func.isRequired,
+  decreaseOrderQty: PropTypes.func.isRequired
 }

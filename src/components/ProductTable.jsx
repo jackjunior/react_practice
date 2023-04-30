@@ -35,10 +35,10 @@ export default function ProductTable() {
     },
   ];
 
-  const [productList, updateProducts] = useState(products);
+  const [productList, setProductList] = useState(products);
 
   function increaseOrderQty(Id) {
-    updateProducts(() => {
+    setProductList(() => {
       return productList.map((product) => {
         if (product.Id === Id) 
           console.log(product)
@@ -47,7 +47,7 @@ export default function ProductTable() {
     });
   }
   function decreaseOrderQty(Id) {
-    updateProducts(() => {
+    setProductList(() => {
       return productList.map((product) => {
         if (product.Id === Id) 
           console.log(product)

@@ -1,10 +1,9 @@
-import productPic from "../assets/pic/fb.png";
 import PropTypes from "prop-types"
 
-export default function Product({ Id, Name, Qty, OrderQty, increaseOrderQty, decreaseOrderQty }) {
+export default function Product({ Id, Name, Pic, Qty, OrderQty, increaseOrderQty, decreaseOrderQty }) {
   return (
     <td>
-      <img src={productPic} className="product-img" />
+      <img src={`/src/assets/pic/${Pic}`} className="product-img" />
       <p className="product-detail">{Name}</p>
       <p className="product-detail">Available Qty: {Qty}</p>
       <div className="product-qty">
@@ -19,6 +18,7 @@ export default function Product({ Id, Name, Qty, OrderQty, increaseOrderQty, dec
 Product.propTypes = {
   Id: PropTypes.string,
   Name: PropTypes.string,
+  Pic: PropTypes.string,
   Qty: PropTypes.number,
   OrderQty: PropTypes.number,
   increaseOrderQty: PropTypes.func.isRequired,

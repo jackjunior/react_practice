@@ -106,3 +106,8 @@ th,td {
 .product-qty label{
   padding: 10px;
 }
+
+img {
+  width: 450px;
+  height: 450px;
+}
